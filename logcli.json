@@ -1,0 +1,26 @@
+﻿{
+  "homepage": "https://scoop.sh/",
+  "description": "LogCLI allows users to run LogQL queries against a Loki server.",
+  "version": "1.6.1",
+  "license": "Apache License 2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/grafana/loki/releases/download/v1.6.1/logcli-windows-amd64.exe.zip",
+      "hash": "5a7d34ec3aff9ce9e3884bc27e721e097688514b41d4a523425f5d787f02b2e7"
+    }
+  },
+  "bin": [["logcli-windows-amd64.exe", "logcli"]],
+  "checkver": {
+    "github": "https://github.com/github/loki"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/github/loki/releases/download/v$version/logcli-windows-amd64.exe.zip"
+      }
+    },
+    "hash": {
+      "url": "$baseurl/SHA256SUMS"
+    }
+  }
+}
